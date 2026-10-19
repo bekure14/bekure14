@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d" />
+      <stop offset="50%" stop-color="#0d1527" />
+      <stop offset="100%" stop-color="#050811" />
+    </linearGradient>
+
+    <!-- Accent Gradient -->
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#34d399" />
+    </linearGradient>
+
+    <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="60" result="blur" />
+    </filter>
+
+    <!-- Subtle Grid Pattern -->
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(255, 255, 255, 0.03)" stroke-width="1" />
+    </pattern>
+  </defs>
+
+  <style>
+    .title {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 800;
+      font-size: 48px;
+      fill: #ffffff;
+      letter-spacing: -0.5px;
+    }
+    .badge-text {
+      font-family: 'SF Mono', Monaco, Menlo, 'Courier New', monospace;
+      font-weight: 700;
+      font-size: 13px;
+      fill: #38bdf8;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .subtitle {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      font-size: 26px;
+      fill: url(#textGrad);
+    }
+    .desc {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      fill: #94a3b8;
+    }
+    .tag {
+      font-family: 'SF Mono', Monaco, Menlo, 'Courier New', monospace;
+      font-size: 13px;
+      fill: #cbd5e1;
+    }
+  </style>
+
+  <!-- Base Card -->
+  <rect width="1200" height="300" rx="16" fill="url(#bgGrad)" />
+  <rect width="1200" height="300" rx="16" fill="url(#grid)" />
+
+  <!-- Ambient Glow Blobs -->
+  <circle cx="150" cy="80" r="120" fill="#0284c7" opacity="0.22" filter="url(#glow)" />
+  <circle cx="1050" cy="180" r="140" fill="#10b981" opacity="0.18" filter="url(#glow)" />
+  <circle cx="650" cy="260" r="100" fill="#6366f1" opacity="0.15" filter="url(#glow)" />
+
+  <!-- Border Highlight -->
+  <rect x="1" y="1" width="1198" height="298" rx="15" fill="none" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1.5" />
+
+  <!-- Left Accent Bar -->
+  <rect x="70" y="52" width="4" height="196" rx="2" fill="url(#textGrad)" />
+
+  <!-- Top Pill / Badge -->
+  <rect x="94" y="52" width="220" height="26" rx="13" fill="rgba(56, 189, 248, 0.1)" stroke="rgba(56, 189, 248, 0.3)" stroke-width="1" />
+  <circle cx="108" cy="65" r="4" fill="#38bdf8" />
+  <text x="122" y="69" class="badge-text">BACKEND ARCHITECT</text>
+
+  <!-- Title & Headline -->
+  <text x="94" y="125" class="title">Hi there, I'm <tspan fill="#38bdf8">Bekure</tspan> 👋</text>
+  <text x="94" y="170" class="subtitle">Full-Stack Backend-Focused Engineer</text>
+  <text x="94" y="206" class="desc">Architecting Scalable Microservices • High-Performance APIs • Distributed Systems &amp; Cloud</text>
+
+  <!-- Tech Focus Pills -->
+  <g transform="translate(94, 226)">
+    <!-- Pill 1: Go -->
+    <rect x="0" y="0" width="80" height="28" rx="6" fill="rgba(255, 255, 255, 0.05)" stroke="rgba(255, 255, 255, 0.1)" />
+    <text x="18" y="18" class="tag">🐹 Go</text>
+
+    <!-- Pill 2: Node.js -->
+    <rect x="90" y="0" width="105" height="28" rx="6" fill="rgba(255, 255, 255, 0.05)" stroke="rgba(255, 255, 255, 0.1)" />
+    <text x="105" y="18" class="tag">⚡ Node.js</text>
+
+    <!-- Pill 3: TypeScript -->
+    <rect x="205" y="0" width="125" height="28" rx="6" fill="rgba(255, 255, 255, 0.05)" stroke="rgba(255, 255, 255, 0.1)" />
+    <text x="218" y="18" class="tag">📘 TypeScript</text>
+
+    <!-- Pill 4: Python -->
+    <rect x="340" y="0" width="100" height="28" rx="6" fill="rgba(255, 255, 255, 0.05)" stroke="rgba(255, 255, 255, 0.1)" />
+    <text x="355" y="18" class="tag">🐍 Python</text>
+
+    <!-- Pill 5: React -->
+    <rect x="450" y="0" width="95" height="28" rx="6" fill="rgba(255, 255, 255, 0.05)" stroke="rgba(255, 255, 255, 0.1)" />
+    <text x="466" y="18" class="tag">⚛️ React</text>
+  </g>
+
+  <!-- Right Decorative Geometric / System Icon -->
+  <g transform="translate(1000, 75)" opacity="0.85">
+    <!-- Server Rack / Cloud Symbol -->
+    <rect x="0" y="0" width="120" height="34" rx="6" fill="#131c31" stroke="#38bdf8" stroke-width="1.5" />
+    <circle cx="20" cy="17" r="4" fill="#34d399" />
+    <circle cx="34" cy="17" r="4" fill="#38bdf8" />
+    <line x1="55" y1="17" x2="105" y2="17" stroke="rgba(255, 255, 255, 0.2)" stroke-width="2" stroke-linecap="round" />
+
+    <line x1="60" y1="34" x2="60" y2="52" stroke="#38bdf8" stroke-width="2" stroke-dasharray="3,3" />
+
+    <rect x="0" y="52" width="120" height="34" rx="6" fill="#131c31" stroke="#818cf8" stroke-width="1.5" />
+    <circle cx="20" cy="69" r="4" fill="#34d399" />
+    <circle cx="34" cy="69" r="4" fill="#818cf8" />
+    <line x1="55" y1="69" x2="105" y2="69" stroke="rgba(255, 255, 255, 0.2)" stroke-width="2" stroke-linecap="round" />
+
+    <line x1="60" y1="86" x2="60" y2="104" stroke="#818cf8" stroke-width="2" stroke-dasharray="3,3" />
+
+    <rect x="0" y="104" width="120" height="34" rx="6" fill="#131c31" stroke="#34d399" stroke-width="1.5" />
+    <circle cx="20" cy="121" r="4" fill="#34d399" />
+    <circle cx="34" cy="121" r="4" fill="#38bdf8" />
+    <line x1="55" y1="121" x2="105" y2="121" stroke="rgba(255, 255, 255, 0.2)" stroke-width="2" stroke-linecap="round" />
+  </g>
+</svg>
